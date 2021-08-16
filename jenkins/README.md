@@ -11,3 +11,27 @@ infrastructure-as-code that is supported by Cloudrail. For those jobs that seem 
 calculate how often they run.
 
 The output is saved to a CSV file to make it easy to analyze in Excel or a similar application.
+
+## Usage
+
+1. Install Python 3.8 if you don't have it already.
+
+2. Create a venv:
+```
+python -m venv venv
+```
+
+3. Switch into the virtual env:
+```
+. venv/bin/activate
+```
+
+4. Install the required Python requirements:
+```
+pip install -r requirements.txt
+```
+
+5. Run the script:
+```
+python scan_jenkins.py --server 'https://myjenkins.server.com/' --username 'myuser' --password 'api_token_or_password'
+```
