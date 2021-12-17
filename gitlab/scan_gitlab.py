@@ -40,7 +40,7 @@ repos_found = 0
 pp = pprint.PrettyPrinter()
 project_key_to_id = {}
 
-for project in gl.projects.list(search=args.project_search, as_list=False):
+for project in gl.projects.list(search=args.project_search, membership=True, as_list=False):
 
     project_key = project.name_with_namespace
     project_key_to_id[project_key] = project.get_id()
